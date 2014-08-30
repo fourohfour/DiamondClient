@@ -24,8 +24,8 @@
 /*    */ 
 /*    */   public void init()
 /*    */   {
-/* 40 */     setSize(800, 600);
-/* 41 */     setTitle("Diamond Hunt - Version 0.61");
+/* 40 */     setSize(FRAME_SIZE_X, FRAME_SIZE_Y);
+/* 41 */     setTitle(FRAME_TITLE);
 /* 42 */     setDefaultCloseOperation(3);
 /* 43 */     setResizable(false);
 /* 44 */     this.startupPanel = new LaunchPanel();
