@@ -11,7 +11,7 @@
 /* 16 */   private final int FRAME_SIZE_X = 800;
 /* 17 */   private final int FRAME_SIZE_Y = 600;
 /*    */ 
-/* 19 */   private final String FRAME_TITLE = "Diamond Hunt - Version 0.61";
+/* 19 */   private final String FRAME_TITLE = "Diamond Client 0.1 [0.6.1]";
 /*    */   private LaunchPanel startupPanel;
 /*    */ 
 /*    */   public static GUI getInstance()
