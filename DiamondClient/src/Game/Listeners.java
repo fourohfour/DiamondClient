@@ -348,8 +348,3 @@
 /*     */     }
 /* 351 */   };
 /*     */ }
-
-/* Location:           X:\Stuff\Jack\Downloads\Diamond Hunt V0.601\clientnew.jar
- * Qualified Name:     Game.Listeners
- * JD-Core Version:    0.6.2
- */

@@ -771,8 +771,3 @@
 /* 879 */     this.shopGui = shopGui;
 /*     */   }
 /*     */ }
-
-/* Location:           X:\Stuff\Jack\Downloads\Diamond Hunt V0.601\clientnew.jar
- * Qualified Name:     GUI.GamePanel
- * JD-Core Version:    0.6.2
- */

@@ -6,7 +6,7 @@
 /*    */ {
 /*  7 */   private static SkillList skillList = null;
 /*  8 */   private ArrayList<Skill> skills = new ArrayList();
-/*    */ 
+/*    */   
 /*    */   public static SkillList getInstance()
 /*    */   {
 /* 17 */     if (skillList == null) {
@@ -30,8 +30,3 @@
 /* 37 */     this.skills = skills;
 /*    */   }
 /*    */ }
-
-/* Location:           X:\Stuff\Jack\Downloads\Diamond Hunt V0.601\clientnew.jar
- * Qualified Name:     players.SkillList
- * JD-Core Version:    0.6.2
- */

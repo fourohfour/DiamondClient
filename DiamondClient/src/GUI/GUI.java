@@ -11,7 +11,7 @@
 /* 16 */   private final int FRAME_SIZE_X = 800;
 /* 17 */   private final int FRAME_SIZE_Y = 600;
 /*    */ 
-/* 19 */   private final String FRAME_TITLE = "Diamond Client 0.1 [0.6.1]";
+/* 19 */   private final String FRAME_TITLE = "Diamond Client 0.2 [0.6.1]";
 /*    */   private LaunchPanel startupPanel;
 /*    */ 
 /*    */   public static GUI getInstance()
@@ -57,8 +57,3 @@
 /* 76 */     return this.startupPanel;
 /*    */   }
 /*    */ }
-
-/* Location:           X:\Stuff\Jack\Downloads\Diamond Hunt V0.601\clientnew.jar
- * Qualified Name:     GUI.GUI
- * JD-Core Version:    0.6.2
- */

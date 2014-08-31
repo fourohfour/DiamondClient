@@ -95,8 +95,3 @@
 /* 100 */     this.GameEngineRunningThread = gameEngineRunningThread;
 /*     */   }
 /*     */ }
-
-/* Location:           X:\Stuff\Jack\Downloads\Diamond Hunt V0.601\clientnew.jar
- * Qualified Name:     Game.GameEngine
- * JD-Core Version:    0.6.2
- */

@@ -20,6 +20,7 @@
 /*     */ 
 /*     */ public class Chat extends JPanel
 /*     */ {
+	        private static final String INVIS_CHAR = "»";
 /*  25 */   private String chatClient = "";
 /*     */ 
 /*  27 */   private ArrayList<String> chatHistory = new ArrayList();
@@ -125,6 +126,21 @@
 /* 136 */             e.printStackTrace();
 /*     */           }
 /*     */         }
+                  else {
+					try {
+						if (yellMessage.split(": ")[1].startsWith(INVIS_CHAR)) {
+							yellMessage = yellMessage.replace(INVIS_CHAR, "");
+							try {
+								icon = ImageIO.read(new File(
+										"cache/graphics/icons/dclient.png"));
+							} catch (IOException e) {
+								e.printStackTrace();
+							}
+						}
+					} catch (IndexOutOfBoundsException ex) {
+
+					}
+				}
 /*     */       }
 /*     */ 
 /* 141 */       if (((String)this.serverMessages.get(i)).startsWith("loggedinmsg="))
@@ -174,6 +190,20 @@
 /* 185 */           e.printStackTrace();
 /*     */         }
 /*     */       }
+                try{
+/* 179 */       if (((String)this.serverMessages.get(i).split(": ")[1]).startsWith(INVIS_CHAR))
+/*     */       {
+/* 181 */         chatMessage = ((String)this.serverMessages.get(i)).replace(INVIS_CHAR, "");
+/*     */         try {
+/* 183 */           icon = ImageIO.read(new File("cache/graphics/icons/dclient.png"));
+/*     */         } catch (IOException e) {
+/* 185 */           e.printStackTrace();
+/*     */         }
+/*     */       }
+                }
+                catch (IndexOutOfBoundsException ex){
+                	
+                }
 /*     */ 
 /* 189 */       if (yellMessage != null)
 /*     */       {
@@ -234,27 +264,32 @@
 /*     */   {
 /* 258 */     if (this.chatClient.length() > 0)
 /*     */     {
-/* 260 */       if (this.chatClient.startsWith("/command"))
+/* 260 */       if (this.chatClient.startsWith("/command")){
 /* 261 */         GamePanel.getInstance().startUpMessage();
-/* 262 */       if (this.chatClient.equals("/brew"))
+                }
+/* 262 */       else if (this.chatClient.equals("/brew")){
 /* 263 */         GamePanel.getInstance().openBrewingInterface();
-/* 264 */       if (this.chatClient.equals("/stuck"))
+                }
+/* 264 */       else if (this.chatClient.equals("/stuck")){
 /* 265 */         Command.getInstance().teleportPlayer(0, 173, 445);
-/* 266 */       if (!this.chatClient.startsWith("/")) {
+                }
+				else if (this.chatClient.startsWith("/yell")){
+					Command.getInstance().sendCommand("chat", "message=" + "/yell" + " " + INVIS_CHAR + this.chatClient.replaceFirst("/yell", "") + ";");
+				}
+/* 266 */       else if (!this.chatClient.startsWith("/")) {
 /* 267 */         PlayerList.getInstance().getPlayer(Config.USERNAME).setChat(this.chatClient);
+                  Command.getInstance().sendCommand("chat", "message=" + INVIS_CHAR + "" + this.chatClient + ";");
 /*     */       }
-/* 269 */       if (this.chatClient.startsWith("//"))
+/* 269 */       else if (this.chatClient.startsWith("//"))
 /*     */       {
 /* 271 */         Config.mapName = this.chatClient.substring(2);
 /* 272 */         Config.saveNotWalkableToFile();
 /*     */       }
 /*     */ 
-/* 276 */       if (this.chatClient.startsWith("~"))
+/* 276 */       else if (this.chatClient.startsWith("~"))
 /*     */       {
 /* 278 */         GamePanel.getInstance().openBrewingInterface();
 /*     */       }
-/*     */ 
-/* 281 */       Command.getInstance().sendCommand("chat", "message=" + this.chatClient + ";");
 /*     */     }
 /*     */ 
 /* 284 */     this.chatClient = "";
@@ -317,7 +352,7 @@
 /*     */   }
 /*     */ }
 
-/* Location:           X:\Stuff\Jack\Downloads\Diamond Hunt V0.601\clientnew.jar
+/* Location:           X:StuffJackDownloadsDiamond Hunt V0.601
  * Qualified Name:     GUI.Chat
  * JD-Core Version:    0.6.2
  */

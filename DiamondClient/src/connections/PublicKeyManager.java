@@ -59,8 +59,3 @@
 /* 66 */     return new String(dectyptedText);
 /*    */   }
 /*    */ }
-
-/* Location:           X:\Stuff\Jack\Downloads\Diamond Hunt V0.601\clientnew.jar
- * Qualified Name:     connections.PublicKeyManager
- * JD-Core Version:    0.6.2
- */

@@ -19,8 +19,3 @@
 /* 24 */     GUI.getInstance().init();
 /*    */   }
 /*    */ }
-
-/* Location:           X:\Stuff\Jack\Downloads\Diamond Hunt V0.601\clientnew.jar
- * Qualified Name:     Main
- * JD-Core Version:    0.6.2
- */

@@ -84,8 +84,3 @@
 /* 91 */       GamePanel.getInstance().getBankGUI().openBank();
 /*    */   }
 /*    */ }
-
-/* Location:           X:\Stuff\Jack\Downloads\Diamond Hunt V0.601\clientnew.jar
- * Qualified Name:     connections.Command
- * JD-Core Version:    0.6.2
- */
